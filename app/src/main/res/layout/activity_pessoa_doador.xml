@@ -1,0 +1,171 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/Creme">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PessoaDoadorActivity"
+    android:padding="@dimen/Small"
+    android:background="@color/Creme">
+<!--Nome-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome: "
+        style="@style/txt_cadastro"
+        android:id="@+id/txtNome" />
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome"
+        style="@style/edt_Style"/>
+<!--Idade-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Idade: "
+        style="@style/txt_cadastro"
+        android:id="@+id/txtIdade"
+        app:layout_constraintTop_toBottomOf="@id/edtNome"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/edtIdade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtIdade"
+        style="@style/edt_Style"/>
+<!--Email-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtEmail"
+        android:layout_marginTop="10dp"
+        android:text="E-mail:"
+        style="@style/txt_cadastro"
+        app:layout_constraintTop_toBottomOf="@id/edtIdade"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@id/txtEmail"
+        style="@style/edt_Style"/>
+<!--Sexo-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSexo"
+        android:layout_marginTop="10dp"
+        android:text="Sexo:"
+        style="@style/txt_cadastro"
+        app:layout_constraintTop_toBottomOf="@id/edtEmail"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rdtGroup"
+        app:layout_constraintTop_toBottomOf="@id/txtSexo"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdtMasc"
+            android:text="Masculuino"
+            android:textColor="@color/Preto"
+            android:textSize="15dp"
+            android:checked="true"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdtFem"
+            android:text="Feminino"
+            android:textColor="@color/Preto"
+            android:textSize="15dp" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdtOut"
+            android:text="Outro"
+            android:textColor="@color/Preto"
+            android:textSize="15dp" />
+    </RadioGroup>
+<!--CPF-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtCpf"
+        android:layout_marginTop="10dp"
+        android:text="CPF:"
+        style="@style/txt_cadastro"
+        app:layout_constraintTop_toBottomOf="@id/rdtGroup"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtCpf"
+        app:layout_constraintTop_toBottomOf="@id/txtCpf"
+        style="@style/edt_Style"
+        android:inputType="number"/>
+<!--Data Niver-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnData"
+        android:background="#ffF"
+        android:text="Data Nasc."
+        android:textColor="@color/Verde"
+        app:layout_constraintTop_toBottomOf="@id/edtCpf"
+        android:onClick="setData"/>
+<!--Endereço-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtEndereço"
+        android:layout_marginTop="10dp"
+        android:text="Endereço:"
+        style="@style/txt_cadastro"
+        app:layout_constraintTop_toBottomOf="@id/btnData"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtEndereço"
+        app:layout_constraintTop_toBottomOf="@id/txtEndereço"
+        style="@style/edt_Style" />
+<!--Termos de Uso-->
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/icnTermo"
+        android:src="@mipmap/iconetermo_foreground"
+        app:layout_constraintTop_toBottomOf="@id/edtEndereço"
+        android:layout_marginTop="@dimen/Small"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clique no Ícone para ler os Termos de Uso"
+        android:textColor="@color/Preto"
+        app:layout_constraintStart_toEndOf="@+id/icnTermo"
+        app:layout_constraintTop_toTopOf="@id/icnTermo"
+        android:layout_marginLeft="@dimen/Small"/>
+<!--Botão enviar-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/icnTermo"
+        android:layout_marginTop="@dimen/Medium"
+        android:text="Enviar"
+        style="@style/button_enviar"
+        android:onClick="enviarPessoaDoador"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

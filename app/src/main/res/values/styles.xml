@@ -1,0 +1,40 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorAccent">@color/Branco</item>
+        <item name="android:textColorPrimary">@color/Laranja_Escuro</item>
+        <item name="android:background">@color/Creme</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="edt_Style">
+        <item name="android:textColor">@color/Preto</item>
+        <item name="android:layout_marginBottom">@dimen/Small</item>
+        <item name="android:textSize">@dimen/Small</item>
+    </style>
+
+    <style name="NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="txt_cadastro">
+        <item name="android:textColor">@color/Laranja_Escuro</item>
+        <item name="android:textSize">@dimen/Small</item>
+    </style>
+
+    <style name="button_enviar">
+        <item name="android:background">@color/Laranja_Escuro</item>
+        <item name="android:textSize">@dimen/Small</item>
+        <item name="android:textColor">@color/Creme</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
